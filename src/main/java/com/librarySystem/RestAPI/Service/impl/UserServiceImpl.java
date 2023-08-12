@@ -15,14 +15,16 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserRepository userRepository;
 
+    @Autowired
+    PasswordEncoder passwordEncoder;
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
     public User addUser(User user) {
 
-        // PasswordEncoder bCrptPasswordEncoder = springSecurityConfig.getEncoder();
-        User existingUser = userRepository.findByName(user.getName());
+        User existingUser = userRepository.findByEmail(user.getEmail());
         if (existingUser == null) {
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
             return (User) userRepository.save(user);
         } else {
             return existingUser;
@@ -30,15 +32,25 @@ public class UserServiceImpl implements UserService {
     }
 
     public ResponseMessageBody getUserByName(String name){
-        System.out.println("name "+name);
         User existingUser = userRepository.findByName(name);
-
         if (existingUser == null) {
-            System.out.println("no user");
             return new ResponseMessageBody("User is not registered.");
         } else {
-            System.out.println("exist user");
             return new ResponseMessageBody(existingUser);
+        }
+    }
+
+    public User login(String email, String password) {
+
+        User user = userRepository.findByEmail(email);
+        if(user != null) {
+            if(passwordEncoder.matches(password, user.getPassword())) {
+                return user;
+            } else {
+                return null;
+            }
+        } else {
+            return null;
         }
     }
 }

@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -33,12 +32,9 @@ public class UserController {
     public ResponseEntity<User> getUserByName(@PathVariable("userName") String name) {
         try {
             ResponseMessageBody responseMessageBody = userService.getUserByName(name);
-            System.out.println(1);
             if(responseMessageBody.getMessage() != null) {
-                System.out.println(2);
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
             }
-            System.out.println(3);
             return new ResponseEntity<>(responseMessageBody.getUser(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -50,6 +46,19 @@ public class UserController {
             User userObject = userService.addUser(user);
             return new ResponseEntity<>(userObject, HttpStatus.OK);
         } catch (Exception e){
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<User> loginUser(@RequestBody User user) {
+        try {
+            User userObj = userService.login(user.getEmail(), user.getPassword());
+            if (userObj == null) {
+                return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+            }
+            return new ResponseEntity<>(userObj, HttpStatus.OK);
+        } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

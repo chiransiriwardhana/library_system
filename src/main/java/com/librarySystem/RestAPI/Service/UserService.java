@@ -15,4 +15,5 @@ public interface UserService {
 
     ResponseMessageBody getUserByName(String name);
 
+    User login(String email, String password);
 }
