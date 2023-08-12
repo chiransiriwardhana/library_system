@@ -19,7 +19,7 @@ You need to provide email and password.
 <img width="1274" alt="Screenshot 2023-08-12 at 18 20 09" src="https://github.com/chiransiriwardhana/library_system/assets/47823522/952d9c10-fcd2-42db-85d8-f86cd5e15074">
 
 # Search by author
-You need to provide author in request parameter.
+You need to provide author in path variable.
 
 <img width="1275" alt="Screenshot 2023-08-12 at 18 34 52" src="https://github.com/chiransiriwardhana/library_system/assets/47823522/7069283a-8199-4676-b7c9-3935ce26ec54">
 
@@ -28,9 +28,11 @@ You need to provide author in request parameter.
 <img width="1278" alt="Screenshot 2023-08-12 at 18 27 01" src="https://github.com/chiransiriwardhana/library_system/assets/47823522/4d262c1e-b1d8-4377-b5e9-4593724d1f55">
 
 # Search by title
-You need to provide title as request parameter.
+You need to provide title as path variable.
 
 <img width="1278" alt="Screenshot 2023-08-12 at 18 29 12" src="https://github.com/chiransiriwardhana/library_system/assets/47823522/d6e2d413-5546-4f7d-8427-1433413f815d">
 
+# Borrow a Book
+You need to provide book name as path variable and user in request body.
 
-
+<img width="1277" alt="Screenshot 2023-08-12 at 18 37 35" src="https://github.com/chiransiriwardhana/library_system/assets/47823522/2ceacbd1-dadf-4b88-ba34-d3b5567ffc41">
