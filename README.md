@@ -32,7 +32,13 @@ You need to provide title as path variable.
 
 <img width="1278" alt="Screenshot 2023-08-12 at 18 29 12" src="https://github.com/chiransiriwardhana/library_system/assets/47823522/d6e2d413-5546-4f7d-8427-1433413f815d">
 
-# Borrow a Book
+# Borrow a book
 You need to provide book name as path variable and user in request body.
 
 <img width="1277" alt="Screenshot 2023-08-12 at 18 37 35" src="https://github.com/chiransiriwardhana/library_system/assets/47823522/2ceacbd1-dadf-4b88-ba34-d3b5567ffc41">
+
+# Return a book
+You need to provide title as path variable and user as request body.
+
+<img width="1273" alt="Screenshot 2023-08-12 at 18 42 32" src="https://github.com/chiransiriwardhana/library_system/assets/47823522/7e6f49d5-dc36-4cd1-a74e-bfb198ec6bcc">
+
