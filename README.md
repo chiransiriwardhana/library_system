@@ -22,7 +22,6 @@ You need to provide email and password.
 You need to provide author in request parameter.
 
 <img width="1277" alt="Screenshot 2023-08-1<img width="1278" alt="Screenshot 2023-08-12 at 18 29 12" src="https://github.com/chiransiriwardhana/library_system/assets/47823522/ad462952-88d0-464c-8897-9ece83f78e36">
-2 at 18 23 30" src="https://github.com/chiransiriwardhana/library_system/assets/47823522/d1710ef1-a213-4d63-a39a-cc35106343af">
 
 # Fetch all users
 
