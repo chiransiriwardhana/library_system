@@ -21,7 +21,7 @@ You need to provide email and password.
 # Search by author
 You need to provide author in request parameter.
 
-<img width="1277" alt="Screenshot 2023-08-1<img width="1278" alt="Screenshot 2023-08-12 at 18 29 12" src="https://github.com/chiransiriwardhana/library_system/assets/47823522/ad462952-88d0-464c-8897-9ece83f78e36">
+<img width="1278" alt="Screenshot 2023-08-12 at 18 29 12" src="https://github.com/chiransiriwardhana/library_system/assets/47823522/ad462952-88d0-464c-8897-9ece83f78e36">
 
 # Fetch all users
 
